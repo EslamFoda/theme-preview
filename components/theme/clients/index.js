@@ -8,6 +8,7 @@ import Design5 from "./designs/design5";
 const MainClients = ({ comp, animate }) => {
   const { designNum, compData, backgroundColor } = comp;
 
+
   const designs = {
     design1: Design1,
     design2: Design2,
