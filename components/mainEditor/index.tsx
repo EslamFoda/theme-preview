@@ -1,9 +1,8 @@
 import React from "react";
 import MainContainer from "../mainContainer";
-import { useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 import { useStickyState } from "../../hooks/useStickyState";
 import useMainData from "../../hooks/useMainData";
-
 
 const colors = [
   "Captain-Green",
@@ -65,18 +64,18 @@ const MainEditor = () => {
     effects[0],
     "theme-effects"
   );
-  
 
   const containerWidth = useSelector((state: any) => state.mainWidth.width);
 
-
   return (
     <div
+      style={{ height: "100%" }}
       className={[themeColor && `theme-${themeColor}`, `theme-light`]
         .filter(Boolean)
         .join(" ")}
     >
       <div
+        style={{ height: "100%" }}
         className={[
           `font font-choosedFont`,
           themeFont && `fontName-${themeFont}`,
@@ -89,7 +88,6 @@ const MainEditor = () => {
           themeId={themeId}
           animate={currentEffect}
           comps={comps}
-          containerWidth={containerWidth}
         />
       </div>
     </div>
