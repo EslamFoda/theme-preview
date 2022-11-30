@@ -1,11 +1,9 @@
 import React from "react";
-import { useEffect } from "react";
 import MainContainer from "../mainContainer";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector} from "react-redux";
 import { useStickyState } from "../../hooks/useStickyState";
 import useMainData from "../../hooks/useMainData";
-import { doc, setDoc } from "firebase/firestore";
-import { db } from "../../utlis/firebase";
+
 
 const colors = [
   "Captain-Green",
@@ -67,31 +65,14 @@ const MainEditor = () => {
     effects[0],
     "theme-effects"
   );
-  const [currentFont, setCurrentFont] = useStickyState(fonts[0], "theme-font");
-  const [mode, setMode] = useStickyState(modes[0], "theme-mode");
-
-  const dispatch = useDispatch();
+  
 
   const containerWidth = useSelector((state: any) => state.mainWidth.width);
 
-  useEffect(() => {
-    if (themeId) {
-      const docRef = doc(db, "themes", themeId);
-      setDoc(
-        docRef,
-        {
-          themeColor: currentColor,
-          themeFont: currentFont,
-        },
-        {
-          merge: true,
-        }
-      ).then(() => console.log("Document updated"));
-    }
-  }, [currentColor, currentFont, themeId]);
+
   return (
     <div
-      className={[themeColor && `theme-${themeColor}`, mode && `theme-${mode}`]
+      className={[themeColor && `theme-${themeColor}`, `theme-light`]
         .filter(Boolean)
         .join(" ")}
     >
