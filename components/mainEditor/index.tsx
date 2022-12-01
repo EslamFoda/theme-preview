@@ -1,11 +1,8 @@
 import React from "react";
-import { useEffect } from "react";
 import MainContainer from "../mainContainer";
-import { useSelector } from "react-redux";
 import { useStickyState } from "../../hooks/useStickyState";
 import useMainData from "../../hooks/useMainData";
-import { doc, setDoc } from "firebase/firestore";
-import { db } from "../../utlis/firebase";
+
 
 const colors = [
   "Captain-Green",
@@ -69,21 +66,21 @@ const MainEditor = ({ id }) => {
   const [currentFont, setCurrentFont] = useStickyState(fonts[0], "theme-font");
   const [mode, setMode] = useStickyState(modes[0], "theme-mode");
 
-  const containerWidth = useSelector((state: any) => state.mainWidth.width);
-  const docRef = doc(db, "themes", id);
+  // const containerWidth = useSelector((state: any) => state.mainWidth.width);
+  // const docRef = doc(db, "themes", id);
 
-  useEffect(() => {
-    setDoc(
-      docRef,
-      {
-        themeColor: currentColor,
-        themeFont: currentFont,
-      },
-      {
-        merge: true,
-      }
-    ).then(() => console.log("Document updated"));
-  }, [currentColor, currentFont, themeId]);
+  // useEffect(() => {
+  //   setDoc(
+  //     docRef,
+  //     {
+  //       themeColor: currentColor,
+  //       themeFont: currentFont,
+  //     },
+  //     {
+  //       merge: true,
+  //     }
+  //   ).then(() => console.log("Document updated"));
+  // }, [currentColor, currentFont, themeId]);
 
   return (
     <div
