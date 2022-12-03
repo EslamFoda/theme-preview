@@ -48,7 +48,7 @@ const Design5 = ({ choose, clientData }) => {
         <div>
           <Container clean>
             <div className={gridClassName}>
-              <div className="p-20 px-5   bg-primary text-white  h-full">
+              <div className="p-20 px-5   bg-gradient-to-b from-primary to-secondary  text-white  h-full">
                 <div className="h-full flex justify-center  flex-col space-y-4 ">
                   <EditorComp initialValue={clientData.title} />
                   <EditorComp initialValue={clientData.subTitle} />
