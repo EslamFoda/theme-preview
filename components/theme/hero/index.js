@@ -5,9 +5,8 @@ import Design3 from "./designs/design3";
 import Design4 from "./designs/design4";
 import Design5 from "./designs/design5";
 
-
 const MainHero = ({ comp }) => {
-  const { designNum, compData } = comp;
+  const { designNum, compData, backgroundColor } = comp;
   const designs = {
     design1: Design1,
     design2: Design2,
@@ -20,6 +19,9 @@ const MainHero = ({ comp }) => {
 
   return (
     <div
+      style={{
+        backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
+      }}
       className={`relative group transition ease-in-out duration-700 w-full `}
     >
       <HeroComp heroData={compData} />

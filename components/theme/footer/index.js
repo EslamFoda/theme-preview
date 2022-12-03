@@ -6,7 +6,7 @@ import Design4 from "./designs/design4";
 import Design5 from "./designs/design5";
 
 const MainFooter = ({ comp }) => {
-  const { designNum, compData } = comp;
+  const { designNum, compData, backgroundColor } = comp;
   const designs = {
     design1: Design1,
     design2: Design2,
@@ -18,7 +18,12 @@ const MainFooter = ({ comp }) => {
   const FooterComp = designs[`design${designNum}`];
 
   return (
-    <div className={`relative group  w-full `}>
+    <div
+      style={{
+        backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
+      }}
+      className={`relative group  w-full `}
+    >
       <FooterComp footerData={compData} />
     </div>
   );
