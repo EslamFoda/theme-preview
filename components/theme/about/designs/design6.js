@@ -13,7 +13,7 @@ const Design6 = ({
           <div className="flex gap-6  mx-auto  lg:justify-between md:justify-center  justify-center items-center py-16 flex-wrap ">
             <div className="h-80 lg:w-[450px] shadow-big md:w-[400px] w-[450px]  relative  ">
               <div className="w-full  h-full">
-              <ImageComp image={aboutData.pic} />
+              <ImageComp design="design6" image={aboutData.pic} />
               </div>
               <div className="bg-gradient-to-b from-primary to-secondary  absolute  lg:-top-6 lg:-left-6 md:-top-6 md:-left-6 -top-4 -left-4 w-full h-full"></div>
             </div>
@@ -26,7 +26,7 @@ const Design6 = ({
                 initialValue={aboutData.subTitle}
               />
               <Button variant="primary" className="self-start">
-                <EditorComp
+                <EditorComp 
                   initialValue={aboutData.btn}
                 
                 />

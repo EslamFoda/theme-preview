@@ -4,6 +4,8 @@ import Design2 from "./designs/design2";
 import Design3 from "./designs/design3";
 import Design4 from "./designs/design4";
 import Design5 from "./designs/design5";
+import Design6 from "./designs/design6";
+import Design7 from "./designs/design7";
 
 const MainHero = ({ comp }) => {
   const { designNum, compData, backgroundColor } = comp;
@@ -13,6 +15,8 @@ const MainHero = ({ comp }) => {
     design3: Design3,
     design4: Design4,
     design5: Design5,
+    design6: Design6,
+    design7: Design7,
   };
 
   const HeroComp = designs[`design${designNum}`];
