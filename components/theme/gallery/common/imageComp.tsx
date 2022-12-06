@@ -4,12 +4,13 @@ import cn from "clsx";
 
 interface Props {
   image: string;
-  design?: "design5";
+  design?: "design5" | "design6";
 }
 
 const ImageComp: FC<Props> = ({ image, design }) => {
   const rootClassName = cn("h-full w-full relative", {
     "hover:outline-none": design === "design5",
+    "z-10": design === "design6",
   });
 
   return (
