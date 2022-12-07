@@ -115,16 +115,17 @@ const Design2 = ({ choose = false, heroData }) => {
             </nav>
           </Container>
           <div
-            className="h-[90vh] relative img-editor-container py-16 "
+            className="h-[550px] relative img-editor-container py-16 "
             style={{
               backgroundImage: `url(${heroData.pic})`,
               backgroundSize: "cover",
+              backgroundPosition: "center",
               MozBackgroundSize: "center center",
               backgroundRepeat: "no-repeat",
             }}
           >
             <Container>
-              <div className="max-w-sm bg-white space-y-10 p-8">
+              <div className="max-w-sm bg-white flex flex-col gap-10 p-8">
                 <EditorComp initialValue={heroData.title} />
                 <EditorComp initialValue={heroData.subTitle} />
                 <Button full>

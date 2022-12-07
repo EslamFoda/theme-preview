@@ -122,10 +122,10 @@ const Design1 = ({ choose = false, heroData }) => {
               </div>
             </nav>
             <div className="flex   mx-auto  lg:justify-between md:justify-center  justify-center items-center py-16 gap-3 flex-wrap ">
-              <div className="flex text-white  flex-col lg:w-[450px] md:w-[400px] w-[450px]">
+              <div className="flex text-white gap-6  flex-col lg:w-[450px] md:w-[400px] w-[450px]">
                 <EditorComp initialValue={heroData.title} />
                 <EditorComp initialValue={heroData.subTitle} />
-                <div className="flex items-center w-full justify-between gap-4 mt-4">
+                <div className="flex items-center w-full justify-between gap-4 ">
                   <Button className="flex-1 !bg-white font-semibold !text-md !text-primary !rounded-none">
                     <EditorComp initialValue={heroData.primaryBtn} />
                   </Button>

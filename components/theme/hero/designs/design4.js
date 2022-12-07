@@ -142,7 +142,7 @@ const Design4 = ({  choose, heroData }) => {
           </div>
           <Container>
             <div className={flexClassName}>
-              <div className="space-y-8">
+              <div className="flex flex-col gap-8">
                 <div className={headerClassName}>
                   <EditorComp initialValue={heroData.title} />
                 </div>
