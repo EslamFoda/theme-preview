@@ -24,7 +24,7 @@ const MainTeam = ({ comp, animate }) => {
       backgroundImage: `linear-gradient(rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a}), rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a})), url(${backgroundImage})`,
       backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
     }}
-      className={`relative group transition ease-in-out duration-700  w-full `}
+      className={`relative group transition ease-in-out duration-700 bg-no-repeat bg-cover bg-center   w-full `}
     >
       <div data-aos={animate}>
         <ServicesComp teamData={compData.items} headers={compData.headers} />

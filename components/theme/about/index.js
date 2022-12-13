@@ -25,7 +25,7 @@ const MainAbout = ({ comp, animate }) => {
       backgroundImage: `linear-gradient(rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a}), rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a})), url(${backgroundImage})`,
       backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
     }}
-      className={`relative group   w-full `}
+      className={`relative group  bg-no-repeat bg-cover bg-center   w-full `}
     >
       <div data-aos={animate}>
         <AboutComp aboutData={compData} />
