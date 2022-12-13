@@ -14,7 +14,7 @@ const Design3 = ({
   const order1ClassName = cn("h-[400px] order-2 lg:order-1 md:order-1", {
   });
   const order2ClassName = cn(
-    "space-y-4  order-1 lg:order-2 md:order-2 self-center max-w-xl px-16 p-5",
+    "space-y-4  order-1 lg:order-2 md:order-2 self-center max-w-xl px-6 p-5",
     {
     }
   );
