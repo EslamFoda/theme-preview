@@ -7,7 +7,7 @@ import Design5 from "./designs/design5";
 import Design6 from "./designs/design6";
 import Design7 from "./designs/design7";
 const MainAbout = ({ comp, animate }) => {
-  const { designNum, compData, backgroundColor } = comp;
+  const { designNum, compData, backgroundColor, backgroundImage, bgImgColor } = comp;
   const designs = {
     design1: Design1,
     design2: Design2,
@@ -21,9 +21,10 @@ const MainAbout = ({ comp, animate }) => {
 
   return (
     <div
-      style={{
-        backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
-      }}
+    style={{
+      backgroundImage: `linear-gradient(rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a}), rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a})), url(${backgroundImage})`,
+      backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
+    }}
       className={`relative group   w-full `}
     >
       <div data-aos={animate}>

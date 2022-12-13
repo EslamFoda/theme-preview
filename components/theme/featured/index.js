@@ -13,7 +13,7 @@ const Design4 = dynamic(() => import("./designs/design4"));
 const Design5 = dynamic(() => import("./designs/design5"));
 
 const MainFeatured = ({ comp, animate }) => {
-  const { designNum, compData, backgroundColor } = comp;
+  const { designNum, compData, backgroundColor, backgroundImage, bgImgColor } = comp;
 
   const designs = {
     design1: Design1,
@@ -33,9 +33,10 @@ const MainFeatured = ({ comp, animate }) => {
 
   return (
     <div
-      style={{
-        backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
-      }}
+    style={{
+      backgroundImage: `linear-gradient(rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a}), rgba(${bgImgColor?.r}, ${bgImgColor?.g}, ${bgImgColor?.b}, ${bgImgColor?.a})), url(${backgroundImage})`,
+      backgroundColor: `rgba(${backgroundColor?.r}, ${backgroundColor?.g}, ${backgroundColor?.b}, ${backgroundColor?.a})`,
+    }}
       className={`relative group transition ease-in-out duration-700   w-full `}
     >
       <div data-aos={animate}>
