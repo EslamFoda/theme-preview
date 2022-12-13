@@ -2,11 +2,10 @@ import React from "react";
 import Container from "../../../ui/container";
 import cn from "clsx";
 import EditorComp from "../../../editor";
-const Design2 = ({ choose = false, device, aboutData }) => {
+const Design2 = ({ choose = false, aboutData }) => {
   const gridClassName = cn(
     "grid lg:grid-cols-2 gap-4 grid-cols-1 sm:grid-cols-1",
     {
-      "!grid-cols-1": device === "mobile",
     }
   );
   return (
