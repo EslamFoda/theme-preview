@@ -6,12 +6,7 @@ import { RiMapPin2Line } from "react-icons/ri";
 import InputComp from "../common/inputComp";
 import Button from "../../../ui/Button";
 
-const Design1 = ({
-  contactData,
-  comp,
-  comps,
-  themeData,
-}) => {
+const Design1 = ({ contactData }) => {
   const icons = {
     email: AiOutlineMail,
     phone: BsTelephone,
